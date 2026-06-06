@@ -11,9 +11,9 @@
  * 如果两个对象互相通过 shared_ptr 持有对方，就会形成循环引用
  * 循环引用会导致引用计数永远无法归零，对象不会被销毁，最终造成内存泄漏
  */
-class BadNode : public Demo1NodeBase {
+class BadNode : public NodeBase {
 public:
-    explicit BadNode(int value) : Demo1NodeBase(value) {
+    explicit BadNode(int value) : NodeBase(value) {
         std::cout << "反例节点 " << value << " 已创建\n";
     }
 
@@ -50,7 +50,8 @@ int main() {
     }
 
     std::cout << "作用域已结束\n";
-    std::cout << "如果没有看到“反例节点已销毁”，说明双向 shared_ptr 形成循环引用，导致对象没有释放\n";
+    
+    std::cout << "如果没有看到“已销毁”，说明双向 shared_ptr 形成循环引用，导致对象没有释放\n";
 
     return 0;
 }

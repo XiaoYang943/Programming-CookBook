@@ -1,7 +1,3 @@
-//
-// Created by Administrator on 2026/2/18.
-//
-
 #include <iostream>
 #include <memory>
 
@@ -9,7 +5,7 @@ using std::cout;
 
 
 /*
- * 1️⃣ 可修改引用（T&）
+ * 可修改引用（T&）
  *
  * 语义：
  * - 调用者必须提供一个存在的对象
@@ -25,7 +21,7 @@ void modifyValue(int& value) {
 
 
 /*
- * 2️⃣ 只读引用（const T&）
+ * 只读引用（const T&）
  *
  * 语义：
  * - 调用者必须提供一个存在的对象
@@ -40,7 +36,7 @@ void readOnlyValue(const int& value) {
 
 
 /*
- * 3️⃣ 指针形式（T*）
+ * 指针形式（T*）
  *
  * 语义：
  * - 对象可以不存在（nullptr）

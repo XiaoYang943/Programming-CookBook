@@ -43,7 +43,8 @@ foreach(DEMO_SOURCE IN LISTS DEMO_SOURCES)
     string(SUBSTRING "${DEMO_HASH}" 0 8 DEMO_HASH_SHORT)
     set(DEMO_TARGET "demo_${DEMO_HASH_SHORT}")
 
-    add_executable("${DEMO_TARGET}" "${DEMO_SOURCE}")
+    add_executable("${DEMO_TARGET}" "${DEMO_SOURCE}"
+            demos/01_core_guidelines/07_resource_资源管理/智能指针/智能指针的选取原则/打破循环引用_选用weak指针/r24_weak_ptr打破双向shared_ptr形成的循环引用.cpp)
 
     target_include_directories("${DEMO_TARGET}" PRIVATE
         "${CMAKE_SOURCE_DIR}/include"

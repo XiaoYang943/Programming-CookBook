@@ -12,9 +12,9 @@
  *
  * weak_ptr 不会增加引用计数，因此可以打破 shared_ptr 形成的循环引用
  */
-class GoodNode : public Demo1NodeBase {
+class GoodNode : public NodeBase {
 public:
-    explicit GoodNode(int value) : Demo1NodeBase(value) {
+    explicit GoodNode(int value) : NodeBase(value) {
         std::cout << "正例节点 " << value << " 已创建\n";
     }
 

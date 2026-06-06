@@ -2,13 +2,13 @@
 
 #include <iostream>
 
-class Demo1NodeBase {
+class NodeBase {
 public:
-    explicit Demo1NodeBase(int value) : value(value) {
+    explicit NodeBase(int value) : value(value) {
         std::cout << "节点基类 " << value << " 已创建\n";
     }
 
-    virtual ~Demo1NodeBase() {
+    virtual ~NodeBase() {
         std::cout << "节点基类 " << value << " 已销毁\n";
     }
 
