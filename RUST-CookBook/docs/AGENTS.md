@@ -53,6 +53,27 @@ book/src/
 
 ## Markdown 与 Demo
 
+- Markdown 应保持标准、清晰的块级结构，避免不同内容在 mdBook 生成的 HTML 中意外合并。
+- 标题、正文段落、引用块、列表、表格和代码块之间应保留一个空行。
+- 连续的来源引用必须彼此保留一个空行，确保渲染为独立引用块。
+- `《Rust 程序设计语言》` 与 `《Rust Reference》` 的每一条来源链接都单独使用一个引用块，不得连续紧贴书写。
+- 推荐：
+
+  ```markdown
+  > 《Rust 程序设计语言》原文：[变量与可变性](https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html)。
+
+  > 《Rust Reference》：[变量](https://doc.rust-lang.org/reference/variables.html)。
+
+  > 《Rust Reference》：[下划线表达式](https://doc.rust-lang.org/reference/expressions/underscore-expr.html)。
+  ```
+
+- 不推荐：
+
+  ```markdown
+  > 《Rust Reference》：[变量](https://doc.rust-lang.org/reference/variables.html)。
+  > 《Rust Reference》：[下划线表达式](https://doc.rust-lang.org/reference/expressions/underscore-expr.html)。
+  ```
+
 - 每个知识主题应逐步具备原理说明、最小 Demo、常见错误、最佳实践和参考资料。
 - Effective Rust等最佳实践应归入最相关的现有知识章节，不要全部集中堆放在扩展目录。
 - 每个归档的Effective Rust页面必须注明Item编号，并附上可跳转的原文链接。
@@ -75,22 +96,21 @@ book/src/
 ## 错误与失败示例
 
 - Panic、编译失败等错误情况可以在 Markdown 中展示给读者。
-- 编译失败示例放入知识点目录下的 `compile_fail/`，不得加入正常 Cargo workspace。
-- 编译失败代码使用 `rust,compile_fail` 代码块。
-- 编译器或程序输出保存为示例目录下的 `output.txt`。
-- `output.txt` 第一行记录执行命令，例如 `$ cargo check`。
-- `output.txt` 应清理本地绝对路径、耗时和其他不稳定信息，避免环境差异干扰阅读。
-- 使用 `console` 代码块和 `{{#include ...}}` 引用 `output.txt`。
+- 编译失败示例直接写在对应知识点的 Markdown 中，不创建独立目录、文件或 Cargo Package。
+- 编译失败示例使用 `rust,editable,ignore,mdbook-runnable` 代码块，让读者在 mdBook 页面点击运行并查看编译错误，同时避免阻塞 `mdbook test`。
+- 不使用 `compile_fail` 代码块。
+- 不为编译失败示例创建或维护 `output.txt`，也不在 Markdown 中渲染编译器输出文件。
+- Panic 示例直接写在对应知识点的 Markdown 中，并根据需要使用 `should_panic`。
+- 失败示例应紧跟对应知识说明，保持代码组织简单，避免失败工程和输出文件分散阅读注意力。
 
 示例：
 
 ````markdown
-```rust,compile_fail
-{{#include compile_fail/immutable_不可变变量不能重新赋值/src/main.rs}}
-```
-
-```console
-{{#include compile_fail/immutable_不可变变量不能重新赋值/output.txt}}
+```rust,editable,ignore,mdbook-runnable
+fn main() {
+    let value = 5;
+    value = 6;
+}
 ```
 ````
 

@@ -17,6 +17,7 @@
 Rust Reference 用于查询 Rust 语言的精确定义，不是循序渐进的入门教程。
 
 > 《Rust Reference》：[简介](https://doc.rust-lang.org/reference/introduction.html)。
+
 > 《Rust Reference》：[语法表示约定](https://doc.rust-lang.org/reference/notation.html)。
 
 | Criterion.rs | 统计驱动的Benchmark工具 | <https://bheisler.github.io/criterion.rs/book/> |

@@ -13,9 +13,14 @@
 | The Rust Reference | Rust语言语法与语义的精确定义 | <https://doc.rust-lang.org/reference/> |
 
 > 《Rust Reference》：[附录](https://doc.rust-lang.org/reference/appendices.html)。
+
 > 《Rust Reference》：[语法规则汇总](https://doc.rust-lang.org/reference/grammar.html)。
+
 > 《Rust Reference》：[语法索引](https://doc.rust-lang.org/reference/syntax-index.html)。
+
 > 《Rust Reference》：[语言设计影响来源](https://doc.rust-lang.org/reference/influences.html)。
+
 > 《Rust Reference》：[测试汇总](https://doc.rust-lang.org/reference/test-summary.html)。
+
 > 《Rust Reference》：[术语表](https://doc.rust-lang.org/reference/glossary.html)。
 
