@@ -1,0 +1,3 @@
+[workspace]
+members = ["book/src/*/*/demo"]
+resolver = "2"

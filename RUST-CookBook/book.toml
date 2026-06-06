@@ -1,0 +1,21 @@
+[book]
+title = "我的 Rust 学习手册"
+authors = ["xiaoyang943"]
+language = "zh-CN"
+src = "book/src"
+
+[rust]
+edition = "2024"
+
+[build]
+build-dir = "target/mdbook"
+
+[output.html]
+git-repository-url = "https://github.com/xiaoyang943/Programming-CookBook"
+
+[output.html.playground]
+editable = true
+copyable = true
+copy-js = true
+line-numbers = true
+runnable = true
