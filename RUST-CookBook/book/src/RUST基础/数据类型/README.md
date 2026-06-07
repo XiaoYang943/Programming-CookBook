@@ -1,6 +1,6 @@
 # 数据类型
 
-> 《Rust 程序设计语言》原文：[数据类型](https://doc.rust-lang.org/book/ch03-02-data-types.html)。
+> 《Rust 程序设计语言》：[数据类型](https://doc.rust-lang.org/book/ch03-02-data-types.html)。
 
 > 《Rust Reference》：[基本类型](https://doc.rust-lang.org/reference/types.html)。
 

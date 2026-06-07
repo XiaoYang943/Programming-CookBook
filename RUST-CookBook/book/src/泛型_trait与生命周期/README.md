@@ -1,6 +1,6 @@
 # 泛型、trait 与生命周期
 
-> 《Rust 程序设计语言》原文：[泛型、trait 与生命周期](https://doc.rust-lang.org/book/ch10-00-generics.html)。
+> 《Rust 程序设计语言》：[泛型、trait 与生命周期](https://doc.rust-lang.org/book/ch10-00-generics.html)。
 
 > 《Rust Reference》：[泛型参数](https://doc.rust-lang.org/reference/items/generics.html)。
 

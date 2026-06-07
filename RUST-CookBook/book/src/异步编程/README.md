@@ -1,6 +1,6 @@
 ﻿# 异步编程
 
-> 《Rust 程序设计语言》原文：[异步编程 Async](https://doc.rust-lang.org/book/ch17-00-async-await.html)。
+> 《Rust 程序设计语言》：[异步编程 Async](https://doc.rust-lang.org/book/ch17-00-async-await.html)。
 
 本一级模块整合《Rust 程序设计语言》的异步编程基础与 [Async Book](https://rust-lang.github.io/async-book/intro.html) 的深入专题。
 

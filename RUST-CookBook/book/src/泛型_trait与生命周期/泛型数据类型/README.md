@@ -1,6 +1,6 @@
 ﻿# 泛型数据类型
 
-> 《Rust 程序设计语言》原文：[泛型数据类型](https://doc.rust-lang.org/book/ch10-01-syntax.html)。
+> 《Rust 程序设计语言》：[泛型数据类型](https://doc.rust-lang.org/book/ch10-01-syntax.html)。
 
 ## 使用泛型函数复用算法
 

@@ -1,6 +1,6 @@
 ﻿# 使用 Vector 存储值列表
 
-> 《Rust 程序设计语言》原文：[使用 Vector 存储值列表](https://doc.rust-lang.org/book/ch08-01-vectors.html)。
+> 《Rust 程序设计语言》：[使用 Vector 存储值列表](https://doc.rust-lang.org/book/ch08-01-vectors.html)。
 
 ## 使用 `Vec<T>` 存储可变长度列表
 

@@ -1,6 +1,6 @@
 # Unsafe Rust
 
-> 《Rust 程序设计语言》原文：[Unsafe Rust](https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html)。
+> 《Rust 程序设计语言》：[Unsafe Rust](https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html)。
 
 > 《Rust Reference》：[Unsafety](https://doc.rust-lang.org/reference/unsafety.html)。
 

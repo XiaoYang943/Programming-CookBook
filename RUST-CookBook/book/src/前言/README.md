@@ -1,4 +1,4 @@
 ﻿# 前言
 
-> 《Rust 程序设计语言》原文：[前言](https://doc.rust-lang.org/book/foreword.html)。
+> 《Rust 程序设计语言》：[前言](https://doc.rust-lang.org/book/foreword.html)。
 

@@ -1,6 +1,6 @@
 # 错误处理
 
-> 《Rust 程序设计语言》原文：[错误处理](https://doc.rust-lang.org/book/ch09-00-error-handling.html)。
+> 《Rust 程序设计语言》：[错误处理](https://doc.rust-lang.org/book/ch09-00-error-handling.html)。
 
 > 《Rust Reference》：[Panic](https://doc.rust-lang.org/reference/panic.html)。
 

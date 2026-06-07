@@ -1,6 +1,6 @@
 # Future 与 async 语法
 
-> 《Rust 程序设计语言》原文：[Future 与 async 语法](https://doc.rust-lang.org/book/ch17-01-futures-and-syntax.html)。
+> 《Rust 程序设计语言》：[Future 与 async 语法](https://doc.rust-lang.org/book/ch17-01-futures-and-syntax.html)。
 
 > 《Rust Reference》：[Await 表达式](https://doc.rust-lang.org/reference/expressions/await-expr.html)。
 

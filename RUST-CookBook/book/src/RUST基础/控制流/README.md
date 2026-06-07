@@ -1,6 +1,6 @@
 # 控制流
 
-> 《Rust 程序设计语言》原文：[控制流](https://doc.rust-lang.org/book/ch03-05-control-flow.html)。
+> 《Rust 程序设计语言》：[控制流](https://doc.rust-lang.org/book/ch03-05-control-flow.html)。
 
 > 《Rust Reference》：[语句与表达式](https://doc.rust-lang.org/reference/statements-and-expressions.html)。
 

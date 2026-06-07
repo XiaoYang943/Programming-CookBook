@@ -71,7 +71,7 @@ book/src/
 - 推荐：
 
   ```markdown
-  > 《Rust 程序设计语言》原文：[变量与可变性](https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html)。
+  > 《Rust 程序设计语言》：[变量与可变性](https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html)。
 
   > 《Rust Reference》：[变量](https://doc.rust-lang.org/reference/variables.html)。
 

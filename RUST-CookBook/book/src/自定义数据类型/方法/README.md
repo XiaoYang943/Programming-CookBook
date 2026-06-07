@@ -1,6 +1,6 @@
 ﻿# 方法
 
-> 《Rust 程序设计语言》原文：[方法](https://doc.rust-lang.org/book/ch05-03-method-syntax.html)。
+> 《Rust 程序设计语言》：[方法](https://doc.rust-lang.org/book/ch05-03-method-syntax.html)。
 
 ## 使用 `impl` 定义方法
 

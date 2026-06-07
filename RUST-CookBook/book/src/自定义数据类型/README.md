@@ -1,8 +1,8 @@
 # 自定义数据类型
 
-> 《Rust 程序设计语言》原文：[使用 struct 组织关联数据](https://doc.rust-lang.org/book/ch05-00-structs.html)。
+> 《Rust 程序设计语言》：[使用 struct 组织关联数据](https://doc.rust-lang.org/book/ch05-00-structs.html)。
 
-> 《Rust 程序设计语言》原文：[enum 与模式匹配](https://doc.rust-lang.org/book/ch06-00-enums.html)。
+> 《Rust 程序设计语言》：[enum 与模式匹配](https://doc.rust-lang.org/book/ch06-00-enums.html)。
 
 > 《Rust Reference》：[Struct 声明](https://doc.rust-lang.org/reference/items/structs.html)。
 

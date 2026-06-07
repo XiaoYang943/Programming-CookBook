@@ -1,6 +1,6 @@
 ﻿# 使用生命周期验证引用
 
-> 《Rust 程序设计语言》原文：[使用生命周期验证引用](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)。
+> 《Rust 程序设计语言》：[使用生命周期验证引用](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)。
 
 ## 使用生命周期标注关联输入与输出引用
 

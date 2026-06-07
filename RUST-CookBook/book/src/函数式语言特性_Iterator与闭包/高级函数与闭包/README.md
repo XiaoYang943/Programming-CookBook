@@ -1,6 +1,6 @@
 # 高级函数与闭包
 
-> 《Rust 程序设计语言》原文：[高级函数与闭包](https://doc.rust-lang.org/book/ch20-04-advanced-functions-and-closures.html)。
+> 《Rust 程序设计语言》：[高级函数与闭包](https://doc.rust-lang.org/book/ch20-04-advanced-functions-and-closures.html)。
 
 > 《Rust Reference》：[函数项类型](https://doc.rust-lang.org/reference/types/function-item.html)。
 

@@ -1,6 +1,6 @@
 # 所有权
 
-> 《Rust 程序设计语言》原文：[所有权](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)。
+> 《Rust 程序设计语言》：[所有权](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)。
 
 > 《Rust Reference》：[内存分配与生命周期](https://doc.rust-lang.org/reference/memory-allocation-and-lifetime.html)。
 
@@ -12,7 +12,7 @@
 
 > 《Rust Reference》：[生命周期省略](https://doc.rust-lang.org/reference/lifetime-elision.html)。
 
-> 《Rust 程序设计语言》原文：[什么是所有权](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)。
+> 《Rust 程序设计语言》：[什么是所有权](https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html)。
 > 
 ## 内存释放的三种方式
 1. 垃圾回收机制(GC)，在程序运行时不断寻找不再使用的内存(Java、Go)

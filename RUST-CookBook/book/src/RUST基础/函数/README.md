@@ -1,6 +1,6 @@
 # 函数
 
-> 《Rust 程序设计语言》原文：[函数](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)。
+> 《Rust 程序设计语言》：[函数](https://doc.rust-lang.org/book/ch03-03-how-functions-work.html)。
 
 > 《Rust Reference》：[函数声明](https://doc.rust-lang.org/reference/items/functions.html)。
 

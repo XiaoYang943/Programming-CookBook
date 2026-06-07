@@ -1,6 +1,6 @@
 # B - 运算符与符号
 
-> 《Rust 程序设计语言》原文：[B - 运算符与符号](https://doc.rust-lang.org/book/appendix-02-operators.html)。
+> 《Rust 程序设计语言》：[B - 运算符与符号](https://doc.rust-lang.org/book/appendix-02-operators.html)。
 
 > 《Rust Reference》：[Token](https://doc.rust-lang.org/reference/tokens.html)。
 

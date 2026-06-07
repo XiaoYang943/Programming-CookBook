@@ -2,7 +2,7 @@
 
 本模块统一整理 Rust 代码组织方式、Cargo 项目管理以及 Crate 设计与发布。
 
-## 《Rust 程序设计语言》原文
+## 《Rust 程序设计语言》
 
 - [Package、crate 与 module](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
 - [深入了解 Cargo 与 crates.io](https://doc.rust-lang.org/book/ch14-00-more-about-cargo.html)

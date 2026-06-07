@@ -1,6 +1,6 @@
 # Package、crate 与 module
 
-> 《Rust 程序设计语言》原文：[Package、crate 与 module](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)。
+> 《Rust 程序设计语言》：[Package、crate 与 module](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)。
 
 > 《Rust Reference》：[Crate 与源文件](https://doc.rust-lang.org/reference/crates-and-source-files.html)。
 

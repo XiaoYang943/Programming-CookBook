@@ -1,6 +1,6 @@
 ﻿# 定义 enum
 
-> 《Rust 程序设计语言》原文：[定义 enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)。
+> 《Rust 程序设计语言》：[定义 enum](https://doc.rust-lang.org/book/ch06-01-defining-an-enum.html)。
 
 ## 使用 `enum` 表达有限状态
 
