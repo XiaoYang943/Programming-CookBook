@@ -14,7 +14,7 @@
 | 4 | [Prefer idiomatic Error types](https://effective-rust.com/errors.html) | [优先使用符合Rust惯例的Error类型](../../错误处理/优先使用符合Rust惯例的Error类型/README.md) |
 | 5 | [Understand type conversions](https://effective-rust.com/casts.html) | [理解类型转换](../../RUST基础/理解类型转换/README.md) |
 | 6 | [Embrace the newtype pattern](https://effective-rust.com/newtype.html) | [使用Newtype模式](../../高级特性/使用Newtype模式/README.md) |
-| 7 | [Use builders for complex types](https://effective-rust.com/builders.html) | [为复杂类型使用Builder模式](../../使用struct组织关联数据/为复杂类型使用Builder模式/README.md) |
+| 7 | [Use builders for complex types](https://effective-rust.com/builders.html) | [为复杂类型使用 Builder 模式](../../自定义数据类型/为复杂类型使用Builder模式/README.md) |
 | 8 | [Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html) | [熟悉引用与指针类型](../../理解所有权/熟悉引用与指针类型/README.md) |
 | 9 | [Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html) | [优先考虑Iterator转换而非显式循环](../../函数式语言特性_Iterator与闭包/优先考虑Iterator转换而非显式循环/README.md) |
 | 10 | [Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html) | [熟悉标准Trait](../../泛型_trait与生命周期/熟悉标准Trait/README.md) |
