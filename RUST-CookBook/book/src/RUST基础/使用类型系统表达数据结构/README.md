@@ -1,6 +1,6 @@
 # 使用类型系统表达数据结构
 
-> 本文对应 Effective Rust **Item 1**：[Use the type system to express your data structures](https://effective-rust.com/use-types.html)。
+> Effective Rust **Item 1**：[Use the type system to express your data structures](https://effective-rust.com/use-types.html)。
 
 ## 使用 newtype 区分相同底层类型
 

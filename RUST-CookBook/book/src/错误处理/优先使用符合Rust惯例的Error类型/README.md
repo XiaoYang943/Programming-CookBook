@@ -1,6 +1,6 @@
 # 优先使用符合 Rust 惯例的 Error 类型
 
-> 本文对应 Effective Rust **Item 4**：[Prefer idiomatic Error types](https://effective-rust.com/errors.html)。
+> Effective Rust **Item 4**：[Prefer idiomatic Error types](https://effective-rust.com/errors.html)。
 
 ## 为库定义具体 Error 类型
 

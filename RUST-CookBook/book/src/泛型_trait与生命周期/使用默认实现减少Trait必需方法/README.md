@@ -1,6 +1,6 @@
 # 使用默认实现减少 trait 必需方法
 
-> 本文对应 Effective Rust **Item 13**：[Use default implementations to minimize required trait methods](https://effective-rust.com/default-impl.html)。
+> Effective Rust **Item 13**：[Use default implementations to minimize required trait methods](https://effective-rust.com/default-impl.html)。
 
 ## 只要求实现最小核心方法
 

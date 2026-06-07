@@ -1,6 +1,6 @@
 # 使用类型系统表达共同行为
 
-> 本文对应 Effective Rust **Item 2**：[Use the type system to express common behavior](https://effective-rust.com/use-types-2.html)。
+> Effective Rust **Item 2**：[Use the type system to express common behavior](https://effective-rust.com/use-types-2.html)。
 
 ## 使用 trait 表达开放的共同行为
 

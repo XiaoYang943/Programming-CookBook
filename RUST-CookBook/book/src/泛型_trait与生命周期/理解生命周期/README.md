@@ -1,6 +1,6 @@
 # 理解生命周期
 
-> 本文对应 Effective Rust **Item 14**：[Understand lifetimes](https://effective-rust.com/lifetimes.html)。
+> Effective Rust **Item 14**：[Understand lifetimes](https://effective-rust.com/lifetimes.html)。
 
 ## 生命周期描述引用关系
 

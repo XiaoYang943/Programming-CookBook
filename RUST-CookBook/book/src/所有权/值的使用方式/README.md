@@ -1,7 +1,7 @@
 
 > 《Rust 程序设计语言》：[引用与借用](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
 > 《Rust 设计模式》：[Use borrowed types for arguments](https://rust-unofficial.github.io/patterns/idioms/coercion-arguments.html)
-> 《高效的Rust-8》：[Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html)。
+> 《Effective Rust Item 8》：[Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html)。
 
 ## 值的移动与复制
 

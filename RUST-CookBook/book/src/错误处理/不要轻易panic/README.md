@@ -1,6 +1,6 @@
 # 不要轻易 `panic`
 
-> 本文对应 Effective Rust **Item 18**：[Don't panic](https://effective-rust.com/panic.html)。
+> Effective Rust **Item 18**：[Don't panic](https://effective-rust.com/panic.html)。
 
 ## 使用 `Result` 保留调用方选择权
 

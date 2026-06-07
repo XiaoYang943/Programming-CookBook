@@ -1,6 +1,6 @@
 # 控制跨越FFI边界的内容
 
-> 本文对应 Effective Rust **Item 34**：[Control what crosses FFI boundaries](https://effective-rust.com/ffi.html)。
+> Effective Rust **Item 34**：[Control what crosses FFI boundaries](https://effective-rust.com/ffi.html)。
 
 归入独立一级模块“FFI与跨语言交互”，因为该主题涉及跨语言ABI与安全边界。
 

@@ -1,6 +1,6 @@
 # 使用 `Drop` 实现 RAII 模式
 
-> 本文对应 Effective Rust **Item 11**：[Implement the Drop trait for RAII patterns](https://effective-rust.com/raii.html)。
+> Effective Rust **Item 11**：[Implement the Drop trait for RAII patterns](https://effective-rust.com/raii.html)。
 
 ## 使用资源守卫实现 RAII
 

@@ -1,6 +1,6 @@
 # 理解 Borrow Checker
 
-> 本文对应 Effective Rust **Item 15**：[Understand the borrow checker](https://effective-rust.com/borrows.html)。
+> Effective Rust **Item 15**：[Understand the borrow checker](https://effective-rust.com/borrows.html)。
 
 ## 使用 Borrow Checker 阻止悬垂引用
 

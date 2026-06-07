@@ -1,6 +1,6 @@
 # 不要只编写单元测试
 
-> 本文对应 Effective Rust **Item 30**：[Write more than unit tests](https://effective-rust.com/testing.html)。
+> Effective Rust **Item 30**：[Write more than unit tests](https://effective-rust.com/testing.html)。
 
 归入“编写自动化测试”，因为它要求组合单元测试、集成测试、文档测试和其他验证方式。
 

@@ -1,6 +1,6 @@
 # 熟悉标准 trait
 
-> 本文对应 Effective Rust **Item 10**：[Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html)。
+> Effective Rust **Item 10**：[Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html)。
 
 ## 实现 `Debug`、`Clone` 与 `Default`
 

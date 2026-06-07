@@ -1,6 +1,6 @@
 # 优先选择 `Option` 和 `Result` 转换
 
-> 本文对应 Effective Rust **Item 3**：[Prefer Option and Result transforms over explicit match expressions](https://effective-rust.com/transform.html)。
+> Effective Rust **Item 3**：[Prefer Option and Result transforms over explicit match expressions](https://effective-rust.com/transform.html)。
 
 ## 使用 `map` 转换成功值
 

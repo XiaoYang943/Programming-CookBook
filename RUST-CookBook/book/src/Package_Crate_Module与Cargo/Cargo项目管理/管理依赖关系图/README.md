@@ -1,6 +1,6 @@
 # 管理依赖关系图
 
-> 本文对应 Effective Rust **Item 25**：[Manage your dependency graph](https://effective-rust.com/dep-graph.html)。
+> Effective Rust **Item 25**：[Manage your dependency graph](https://effective-rust.com/dep-graph.html)。
 
 归入“深入了解Cargo与crates.io”，因为依赖关系图由Cargo解析并直接影响构建与维护成本。
 

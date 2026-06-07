@@ -1,6 +1,6 @@
 # 优先考虑 Iterator 转换而非显式循环
 
-> 本文对应 Effective Rust **Item 9**：[Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html)。
+> Effective Rust **Item 9**：[Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html)。
 
 ## 使用 Iterator 表达转换意图
 

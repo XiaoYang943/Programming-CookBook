@@ -1,6 +1,6 @@
 # 为复杂类型使用Builder模式
 
-> 本文对应 Effective Rust **Item 7**：[Use builders for complex types](https://effective-rust.com/builders.html)。
+> Effective Rust **Item 7**：[Use builders for complex types](https://effective-rust.com/builders.html)。
 
 ## 使用 Builder 分步骤配置复杂类型
 

@@ -1,6 +1,6 @@
 # 理解泛型与 Trait Object 的权衡
 
-> 本文对应 Effective Rust **Item 12**：[Understand the trade-offs between generics and trait objects](https://effective-rust.com/generics.html)。
+> Effective Rust **Item 12**：[Understand the trade-offs between generics and trait objects](https://effective-rust.com/generics.html)。
 
 ## 使用泛型进行静态分派
 

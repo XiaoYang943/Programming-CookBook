@@ -1,6 +1,6 @@
 # 避免使用反射
 
-> 本文对应 Effective Rust **Item 19**：[Avoid reflection](https://effective-rust.com/reflection.html)。
+> Effective Rust **Item 19**：[Avoid reflection](https://effective-rust.com/reflection.html)。
 
 ## 使用 trait 表达需要的能力
 

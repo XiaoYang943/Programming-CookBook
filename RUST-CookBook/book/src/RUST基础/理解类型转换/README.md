@@ -1,6 +1,6 @@
 # 理解类型转换
 
-> 本文对应 Effective Rust **Item 5**：[Understand type conversions](https://effective-rust.com/casts.html)。
+> Effective Rust **Item 5**：[Understand type conversions](https://effective-rust.com/casts.html)。
 
 ## 使用 `from` 与 `into` 执行可靠转换
 
