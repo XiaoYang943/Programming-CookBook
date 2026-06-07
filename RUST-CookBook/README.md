@@ -96,7 +96,7 @@ cargo check --workspace
 book/
 └── src/
     ├── SUMMARY.md
-    ├── 常见编程概念/
+    ├── RUST基础/
     │   ├── README.md
     │   └── 变量与可变性/
     │       ├── README.md
@@ -116,17 +116,17 @@ book/
 
 ## 新增知识章节
 
-例如新增“常见编程概念/表达式”：
+例如新增“RUST基础/表达式”：
 
 ```text
-book/src/常见编程概念/表达式/
+book/src/RUST基础/表达式/
 └── README.md
 ```
 
 然后在 `book/src/SUMMARY.md` 中添加：
 
 ```markdown
-- [表达式](常见编程概念/表达式/README.md)
+- [表达式](RUST基础/表达式/README.md)
 ```
 
 只有被 `SUMMARY.md` 引用的 Markdown 页面才会显示在 mdBook 导航中。
@@ -136,7 +136,7 @@ book/src/常见编程概念/表达式/
 需要代码示例时，在知识点目录中创建固定名称的 `demo` Cargo Package：
 
 ```powershell
-cargo new "book/src/常见编程概念/表达式/demo" --name expressions_demo
+cargo new "book/src/RUST基础/表达式/demo" --name expressions_demo
 ```
 
 建议将多个独立示例放入 `src/bin/`：

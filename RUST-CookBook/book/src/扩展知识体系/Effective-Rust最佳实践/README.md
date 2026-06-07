@@ -8,11 +8,11 @@
 
 | Item | 建议 | 本项目归属 |
 | ---: | --- | --- |
-| 1 | [Use the type system to express your data structures](https://effective-rust.com/use-types.html) | [使用类型系统表达数据结构](../../常见编程概念/使用类型系统表达数据结构/README.md) |
+| 1 | [Use the type system to express your data structures](https://effective-rust.com/use-types.html) | [使用类型系统表达数据结构](../../RUST基础/使用类型系统表达数据结构/README.md) |
 | 2 | [Use the type system to express common behavior](https://effective-rust.com/use-types-2.html) | [使用类型系统表达共同行为](../../泛型_trait与生命周期/使用类型系统表达共同行为/README.md) |
 | 3 | [Prefer Option and Result transforms over explicit match expressions](https://effective-rust.com/transform.html) | [优先选择Option和Result转换](../../错误处理/优先选择Option和Result转换/README.md) |
 | 4 | [Prefer idiomatic Error types](https://effective-rust.com/errors.html) | [优先使用符合Rust惯例的Error类型](../../错误处理/优先使用符合Rust惯例的Error类型/README.md) |
-| 5 | [Understand type conversions](https://effective-rust.com/casts.html) | [理解类型转换](../../常见编程概念/理解类型转换/README.md) |
+| 5 | [Understand type conversions](https://effective-rust.com/casts.html) | [理解类型转换](../../RUST基础/理解类型转换/README.md) |
 | 6 | [Embrace the newtype pattern](https://effective-rust.com/newtype.html) | [使用Newtype模式](../../高级特性/使用Newtype模式/README.md) |
 | 7 | [Use builders for complex types](https://effective-rust.com/builders.html) | [为复杂类型使用Builder模式](../../使用struct组织关联数据/为复杂类型使用Builder模式/README.md) |
 | 8 | [Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html) | [熟悉引用与指针类型](../../理解所有权/熟悉引用与指针类型/README.md) |

@@ -25,7 +25,7 @@
 
 ```text
 book/src/
-└── 常见编程概念/
+└── RUST基础/
     ├── README.md
     └── 变量与可变性/
         ├── README.md
