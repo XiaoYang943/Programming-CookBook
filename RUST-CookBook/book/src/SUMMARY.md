@@ -21,7 +21,6 @@
 - [所有权](所有权/README.md)
   - [值的使用方式](所有权/值的使用方式/README.md)
   - [Slice 类型](所有权/Slice类型/README.md)
-  - [熟悉引用与指针类型](所有权/熟悉引用与指针类型/README.md)
   - [理解Borrow Checker](所有权/理解Borrow-Checker/README.md)
   - [使用mem::take和mem::replace转移可变引用中的所有权](所有权/使用mem-take和replace转移可变引用中的所有权/README.md)
   - [不要为了满足Borrow Checker而Clone](所有权/不要为了满足Borrow-Checker而Clone/README.md)

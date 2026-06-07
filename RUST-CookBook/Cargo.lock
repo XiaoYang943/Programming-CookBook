@@ -151,10 +151,6 @@ name = "ownership_mem_take_replace"
 version = "0.1.0"
 
 [[package]]
-name = "ownership_pointer_types"
-version = "0.1.0"
-
-[[package]]
 name = "ownership_slices"
 version = "0.1.0"
 

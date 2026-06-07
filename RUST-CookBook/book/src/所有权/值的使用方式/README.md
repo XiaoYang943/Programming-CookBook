@@ -1,6 +1,7 @@
 
 > 《Rust 程序设计语言》：[引用与借用](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)
 > 《Rust 设计模式》：[Use borrowed types for arguments](https://rust-unofficial.github.io/patterns/idioms/coercion-arguments.html)
+> 《高效的Rust-8》：[Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html)。
 
 ## 值的移动与复制
 
@@ -96,3 +97,29 @@ Rust 会阻止返回指向局部变量的引用
 - 需要添加、删除元素或调整容量，使用 `&mut Vec<T>`，获得容器管理能力
 
 {{#playground demo/src/bin/mutable_slice_修改连续元素.rs editable}}
+
+### 谨慎使用 `*const T` 与 `*mut T`
+
+原始指针不受普通借用规则保护，解引用需要 `unsafe`。它们主要用于 FFI、底层数据结构和性能敏感边界
+
+{{#playground demo/src/bin/raw_pointer_读取原始指针.rs editable}}
+
+## 智能指针与所有权
+
+### 使用 `Box<T>` 获得堆上唯一所有权
+
+`Box<T>` 在堆上存储值，并保持单一所有者。离开作用域时，Box 和其内容会一起释放。
+
+{{#playground demo/src/bin/box_堆上唯一所有权.rs editable}}
+
+### 使用 `Rc<T>` 共享单线程所有权
+
+`Rc<T>` 通过引用计数允许同一个值拥有多个所有者，仅适用于单线程。
+
+{{#playground demo/src/bin/rc_共享单线程所有权.rs editable}}
+
+### 使用 `Arc<T>` 共享多线程所有权
+
+`Arc<T>` 使用原子引用计数，可以在线程间共享所有权。共享可变状态通常还需要配合同步类型。
+
+{{#playground demo/src/bin/arc_共享多线程所有权.rs editable}}
