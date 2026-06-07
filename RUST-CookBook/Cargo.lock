@@ -3,5 +3,241 @@
 version = 4
 
 [[package]]
+name = "collections_format_string"
+version = "0.1.0"
+
+[[package]]
+name = "collections_hashmap"
+version = "0.1.0"
+
+[[package]]
+name = "collections_string"
+version = "0.1.0"
+
+[[package]]
+name = "collections_vector"
+version = "0.1.0"
+
+[[package]]
+name = "common_comments"
+version = "0.1.0"
+
+[[package]]
+name = "common_control_flow"
+version = "0.1.0"
+
+[[package]]
+name = "common_data_types"
+version = "0.1.0"
+
+[[package]]
+name = "common_functions"
+version = "0.1.0"
+
+[[package]]
+name = "common_lexical_structure"
+version = "0.1.0"
+
+[[package]]
+name = "common_temporary_mutability"
+version = "0.1.0"
+
+[[package]]
+name = "common_type_conversions"
+version = "0.1.0"
+
+[[package]]
+name = "common_type_driven_design"
+version = "0.1.0"
+
+[[package]]
+name = "enum_definitions"
+version = "0.1.0"
+
+[[package]]
+name = "enum_if_let"
+version = "0.1.0"
+
+[[package]]
+name = "enum_match"
+version = "0.1.0"
+
+[[package]]
+name = "errors_dont_panic"
+version = "0.1.0"
+
+[[package]]
+name = "errors_idiomatic_types"
+version = "0.1.0"
+
+[[package]]
+name = "errors_panic"
+version = "0.1.0"
+
+[[package]]
+name = "errors_panic_or_result"
+version = "0.1.0"
+
+[[package]]
+name = "errors_result"
+version = "0.1.0"
+
+[[package]]
+name = "errors_return_consumed_argument"
+version = "0.1.0"
+
+[[package]]
+name = "errors_transforms"
+version = "0.1.0"
+
+[[package]]
+name = "generics_data_types"
+version = "0.1.0"
+
+[[package]]
+name = "lifetimes_understanding"
+version = "0.1.0"
+
+[[package]]
+name = "lifetimes_validation"
+version = "0.1.0"
+
+[[package]]
+name = "lifetimes_variance"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_avoid_borrow_clone"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_basics"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_borrow_checker"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_borrowed_arguments"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_mem_take_replace"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_pointer_types"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_references"
+version = "0.1.0"
+
+[[package]]
+name = "ownership_slices"
+version = "0.1.0"
+
+[[package]]
+name = "smart_avoid_deref_polymorphism"
+version = "0.1.0"
+
+[[package]]
+name = "smart_box"
+version = "0.1.0"
+
+[[package]]
+name = "smart_collections"
+version = "0.1.0"
+
+[[package]]
+name = "smart_deref"
+version = "0.1.0"
+
+[[package]]
+name = "smart_destructor_cleanup"
+version = "0.1.0"
+
+[[package]]
+name = "smart_drop"
+version = "0.1.0"
+
+[[package]]
+name = "smart_raii"
+version = "0.1.0"
+
+[[package]]
+name = "smart_rc"
+version = "0.1.0"
+
+[[package]]
+name = "smart_refcell"
+version = "0.1.0"
+
+[[package]]
+name = "smart_reference_cycles"
+version = "0.1.0"
+
+[[package]]
+name = "struct_builder_pattern"
+version = "0.1.0"
+
+[[package]]
+name = "struct_constructor_idiom"
+version = "0.1.0"
+
+[[package]]
+name = "struct_definitions"
+version = "0.1.0"
+
+[[package]]
+name = "struct_example_program"
+version = "0.1.0"
+
+[[package]]
+name = "struct_methods"
+version = "0.1.0"
+
+[[package]]
+name = "traits_advanced"
+version = "0.1.0"
+
+[[package]]
+name = "traits_avoid_reflection"
+version = "0.1.0"
+
+[[package]]
+name = "traits_common_behavior"
+version = "0.1.0"
+
+[[package]]
+name = "traits_custom_bounds"
+version = "0.1.0"
+
+[[package]]
+name = "traits_default_methods"
+version = "0.1.0"
+
+[[package]]
+name = "traits_default_value"
+version = "0.1.0"
+
+[[package]]
+name = "traits_dispatch_tradeoffs"
+version = "0.1.0"
+
+[[package]]
+name = "traits_on_stack_dispatch"
+version = "0.1.0"
+
+[[package]]
+name = "traits_standard"
+version = "0.1.0"
+
+[[package]]
+name = "traits_type_system_behavior"
+version = "0.1.0"
+
+[[package]]
 name = "variables_and_mutability"
 version = "0.1.0"

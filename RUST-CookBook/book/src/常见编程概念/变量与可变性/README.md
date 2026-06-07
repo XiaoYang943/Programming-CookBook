@@ -69,7 +69,7 @@
 
 当值需要共享、能在编译期确定并具有明确领域含义时，使用 `const`。
 
-## 使用 Shadowing 创建新绑定
+## 使用变量遮蔽创建新绑定
 
 **核心规则**
 
@@ -85,7 +85,7 @@ Shadowing 创建新绑定，因此可以在复用名称时改变值的类型。
 
 {{#playground demo/src/bin/shadowing_改变类型.rs editable}}
 
-## 对比 `mut` 或 Shadowing
+## 对比 `mut` 与变量遮蔽
 
 **核心区别**
 

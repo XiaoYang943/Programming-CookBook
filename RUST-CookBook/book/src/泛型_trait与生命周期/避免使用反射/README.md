@@ -2,10 +2,20 @@
 
 > 本文对应 Effective Rust **Item 19**：[Avoid reflection](https://effective-rust.com/reflection.html)。
 
-Rust 通常通过 Trait、泛型和代码生成替代运行时反射，因此本节归入“泛型、trait 与生命周期”。
+## 使用 trait 表达需要的能力
 
-## 待补充
+与其在运行时查询类型并分支，不如定义调用方真正需要的行为。
 
-- Trait 替代方案
-- `Any` 的适用边界
-- 配套 Demo 与实践检查表
+{{#playground demo/src/bin/trait_使用行为代替类型查询.rs editable}}
+
+## 在受控边界使用 `Any`
+
+`Any` 可以进行运行时类型检查，但会失去大量静态类型信息，只适合插件注册表、测试工具等受控边界。
+
+{{#playground demo/src/bin/any_在受控边界查询类型.rs editable}}
+
+## 选择原则
+
+- 业务逻辑优先使用 trait、enum 和泛型。
+- 类型集合封闭时使用 enum 穷尽匹配。
+- 只有框架边界确实无法预知类型时才考虑 `Any`。
