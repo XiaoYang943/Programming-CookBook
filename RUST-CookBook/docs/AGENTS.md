@@ -16,6 +16,7 @@
 - `book/src/<顶级章节>/README.md`：顶级章节入口。
 - `book/src/<顶级章节>/<知识点>/README.md`：知识点正文。
 - `book/src/<顶级章节>/<知识点>/demo/`：与知识点就近存放的可选 Cargo Package。
+- `book/src/<顶级章节>/<知识点>/snippets/`：不参与 Cargo workspace 的失败示例或辅助代码片段。
 - `target/`：Cargo 与 mdBook 构建产物。
 
 ## 目录结构
@@ -28,9 +29,10 @@ book/src/
     ├── README.md
     └── 变量与可变性/
         ├── README.md
-        └── demo/
+        ├── demo/
             ├── Cargo.toml
             └── src/bin/
+        └── snippets/
 ```
 
 - 不创建全局 `demos/` 目录。
@@ -55,6 +57,10 @@ book/src/
 
 - Markdown 应保持标准、清晰的块级结构，避免不同内容在 mdBook 生成的 HTML 中意外合并。
 - 标题、正文段落、引用块、列表、表格和代码块之间应保留一个空行。
+- 知识点小标题应直接表达该节的学习目标，并包含最重要的 Rust feature、关键字、类型、Trait、函数或工具英文名称。
+- 小标题优先使用“动作 + 核心 Rust 语法”的形式，做到短小精悍，让读者仅看标题即可明确示例目标。
+- 推荐：`使用 let 声明不可变绑定`、`使用 mut 重新赋值`、`使用 Shadowing 创建新绑定`。
+- 不推荐：`变量与绑定`、`可变性`、`变量的相关知识与使用方法`。
 - 连续的来源引用必须彼此保留一个空行，确保渲染为独立引用块。
 - `《Rust 程序设计语言》` 与 `《Rust Reference》` 的每一条来源链接都单独使用一个引用块，不得连续紧贴书写。
 - 推荐：
@@ -88,31 +94,57 @@ book/src/
 - 多文件、第三方依赖、网络、异步运行时等示例，通过 Cargo 命令运行。
 - mdBook 中的示例应尽量引用真实 Demo 文件，避免文档代码与 Demo 长期不一致。
 - Markdown 正文负责总结知识点，代码示例直接出现在对应知识点附近，并引用真实 `.rs` 文件。
+- Markdown 中不允许直接编写包含 `fn main` 的代码块；完整示例必须拆分到外部 `.rs` 文件，并通过文件方式引用。
 - 不在 Markdown 中单独增加“配套 Demo”清单章节。
 - 能使用断言表达示例预期时，优先使用断言，不使用无意义的打印输出。
 - 所有 Demo 应能够通过 `cargo check --workspace` 检查。
 - Markdown 中的 Rust 代码应尽量能够通过 `mdbook test` 检查。
 
+## 知识点内容模板
+
+- 知识点正文应提炼官方资料的核心规则，使用稳定的信息层次组织内容，避免连续堆叠大段解释。
+- 模板中的栏目按实际内容选用，不要求每个知识点机械包含全部栏目。
+- 栏目名称必须表达实际含义，不使用 `扩展1`、`扩展2` 等无法独立说明内容的名称。
+- 栏目优先使用加粗文本而不是继续增加标题层级，例如：`**核心规则**`。
+
+### 语法特性模板
+
+- 适用于 `let`、`mut`、`const`、Shadowing 等语言特性。
+- 按需使用：`核心规则`、`基本示例`、`适用范围`、`语法限制`、`实践建议`。
+
+### 特性对比模板
+
+- 适用于 `mut` 与 Shadowing、`String` 与 `&str` 等特性选择。
+- 按需使用：`核心区别`、`选择原则`、`对比示例`。
+- 核心区别适合使用表格表达，选择原则适合使用简短列表表达。
+
+### 错误与限制模板
+
+- 适用于所有权错误、借用冲突、类型不匹配等失败场景。
+- 按需使用：`错误原因`、`错误示例`、`正确做法`。
+- 错误示例紧跟原因，正确做法应引用可以运行或对照学习的示例。
+
+### 最佳实践模板
+
+- 适用于总结一组语法或 API 的选择建议。
+- 按需使用：`默认选择`、`选择建议`、`注意事项`。
+- 建议必须具体、可执行，避免重复正文或只表达宽泛原则。
+
 ## 错误与失败示例
 
 - Panic、编译失败等错误情况可以在 Markdown 中展示给读者。
-- 编译失败示例直接写在对应知识点的 Markdown 中，不创建独立目录、文件或 Cargo Package。
-- 编译失败示例使用 `rust,editable,ignore,mdbook-runnable` 代码块，让读者在 mdBook 页面点击运行并查看编译错误，同时避免阻塞 `mdbook test`。
-- 不使用 `compile_fail` 代码块。
+- 编译失败、Panic 或不适合作为 Cargo target 的示例放入知识点目录下的 `snippets/`。
+- `snippets/` 不加入 Cargo workspace，不得影响 `cargo check --workspace`。
+- Markdown 通过文件方式引用 `snippets/` 中的 `.rs` 文件，让读者在 mdBook 页面运行并查看错误。
+- 编译失败示例引用时添加 `ignore mdbook-runnable` 属性：`ignore` 避免阻塞 `mdbook test`，`mdbook-runnable` 保留页面运行按钮。
 - 不为编译失败示例创建或维护 `output.txt`，也不在 Markdown 中渲染编译器输出文件。
-- Panic 示例直接写在对应知识点的 Markdown 中，并根据需要使用 `should_panic`。
-- 失败示例应紧跟对应知识说明，保持代码组织简单，避免失败工程和输出文件分散阅读注意力。
+- 失败示例应紧跟对应知识说明，并采用能够说明失败原因的中英混合文件名。
 
 示例：
 
-````markdown
-```rust,editable,ignore,mdbook-runnable
-fn main() {
-    let value = 5;
-    value = 6;
-}
+```markdown
+{{#playground snippets/immutable_不可变绑定不能重新赋值.rs editable ignore mdbook-runnable}}
 ```
-````
 
 ## 修改与删除约束
 

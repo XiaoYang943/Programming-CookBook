@@ -130,7 +130,6 @@ fn main() {
 | `ignore` | 不执行测试，也不显示运行按钮 |
 | `no_run` | 只检查编译，不运行代码 |
 | `should_panic` | 示例应当成功编译，并在运行时发生 Panic |
-| `compile_fail` | 示例应当编译失败 |
 | `edition2015` | 使用 Rust 2015 Edition |
 | `edition2018` | 使用 Rust 2018 Edition |
 | `edition2021` | 使用 Rust 2021 Edition |
@@ -310,7 +309,7 @@ runnable = true
 | 只展示真实文件中的一个片段 | `{{#include ...:anchor}}` |
 | 展示片段但需要完整代码参与测试 | `{{#rustdoc_include ...:anchor}}` |
 | 只需编译，不应运行 | `no_run` |
-| 故意演示编译错误 | `compile_fail` |
+| 故意演示编译错误 | `rust,editable,ignore,mdbook-runnable` 内联代码块 |
 | 伪代码或不完整代码 | 标记为 `text`，不要冒充可运行 Rust |
 
 ## 常见问题
@@ -327,16 +326,16 @@ runnable = true
 
 不建议。Playground 运行在共享且受限的容器环境中，结果不能代表真实机器上的稳定性能。
 
-### `compile_fail` 是否永远可靠？
+### 如何展示编译错误？
 
-不一定。今天无法编译的代码，可能在未来 Rust 版本中变为合法代码。应让示例针对明确、稳定的语言规则，并定期运行 `mdbook test`。
+本项目使用 `rust,editable,ignore,mdbook-runnable` 内联代码块。读者可以在页面中点击运行查看编译错误，而该代码块不会阻塞 `mdbook test`。
 
 ### 为什么 mdBook 页面没有运行按钮？
 
 常见原因：
 
 - 代码块没有标记为 `rust`。
-- 使用了 `ignore`、`no_run`、`compile_fail` 或 `noplayground`。
+- 使用了 `no_run`、`noplayground`，或者没有配合 `mdbook-runnable` 使用 `ignore`。
 - `book.toml` 中全局关闭了 Playground。
 - 示例依赖当前页面无法提供的外部环境。
 
