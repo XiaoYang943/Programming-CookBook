@@ -15,14 +15,14 @@
 | 5 | [Understand type conversions](https://effective-rust.com/casts.html) | [理解类型转换](../../RUST基础/理解类型转换/README.md) |
 | 6 | [Embrace the newtype pattern](https://effective-rust.com/newtype.html) | [使用Newtype模式](../../高级特性/使用Newtype模式/README.md) |
 | 7 | [Use builders for complex types](https://effective-rust.com/builders.html) | [为复杂类型使用 Builder 模式](../../自定义数据类型/为复杂类型使用Builder模式/README.md) |
-| 8 | [Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html) | [熟悉引用与指针类型](../../理解所有权/熟悉引用与指针类型/README.md) |
+| 8 | [Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html) | [熟悉引用与指针类型](../../所有权/熟悉引用与指针类型/README.md) |
 | 9 | [Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html) | [优先考虑Iterator转换而非显式循环](../../函数式语言特性_Iterator与闭包/优先考虑Iterator转换而非显式循环/README.md) |
 | 10 | [Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html) | [熟悉标准Trait](../../泛型_trait与生命周期/熟悉标准Trait/README.md) |
 | 11 | [Implement the Drop trait for RAII patterns](https://effective-rust.com/raii.html) | [使用Drop Trait实现RAII模式](../../智能指针/使用Drop-Trait实现RAII模式/README.md) |
 | 12 | [Understand the trade-offs between generics and trait objects](https://effective-rust.com/generics.html) | [理解泛型与Trait Object的权衡](../../泛型_trait与生命周期/理解泛型与Trait-Object的权衡/README.md) |
 | 13 | [Use default implementations to minimize required trait methods](https://effective-rust.com/default-impl.html) | [使用默认实现减少Trait必需方法](../../泛型_trait与生命周期/使用默认实现减少Trait必需方法/README.md) |
 | 14 | [Understand lifetimes](https://effective-rust.com/lifetimes.html) | [理解生命周期](../../泛型_trait与生命周期/理解生命周期/README.md) |
-| 15 | [Understand the borrow checker](https://effective-rust.com/borrows.html) | [理解Borrow Checker](../../理解所有权/理解Borrow-Checker/README.md) |
+| 15 | [Understand the borrow checker](https://effective-rust.com/borrows.html) | [理解Borrow Checker](../../所有权/理解Borrow-Checker/README.md) |
 | 16 | [Avoid writing unsafe code](https://effective-rust.com/unsafe.html) | [避免编写Unsafe代码](../../高级特性/避免编写Unsafe代码/README.md) |
 | 17 | [Be wary of shared-state parallelism](https://effective-rust.com/deadlock.html) | [警惕共享状态并行](../../并发编程/警惕共享状态并行/README.md) |
 | 18 | [Don't panic](https://effective-rust.com/panic.html) | [不要轻易panic](../../错误处理/不要轻易panic/README.md) |
