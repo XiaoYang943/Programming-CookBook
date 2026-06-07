@@ -143,15 +143,7 @@ name = "ownership_avoid_borrow_clone"
 version = "0.1.0"
 
 [[package]]
-name = "ownership_basics"
-version = "0.1.0"
-
-[[package]]
 name = "ownership_borrow_checker"
-version = "0.1.0"
-
-[[package]]
-name = "ownership_borrowed_arguments"
 version = "0.1.0"
 
 [[package]]
@@ -160,10 +152,6 @@ version = "0.1.0"
 
 [[package]]
 name = "ownership_pointer_types"
-version = "0.1.0"
-
-[[package]]
-name = "ownership_references"
 version = "0.1.0"
 
 [[package]]
@@ -268,6 +256,10 @@ version = "0.1.0"
 
 [[package]]
 name = "traits_type_system_behavior"
+version = "0.1.0"
+
+[[package]]
+name = "value_movement_and_copying"
 version = "0.1.0"
 
 [[package]]

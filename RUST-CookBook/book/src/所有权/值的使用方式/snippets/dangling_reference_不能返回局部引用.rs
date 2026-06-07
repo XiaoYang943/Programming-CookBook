@@ -1,5 +1,6 @@
 fn dangling() -> &String {
     let value = String::from("Rust");
+
     &value
 }
 

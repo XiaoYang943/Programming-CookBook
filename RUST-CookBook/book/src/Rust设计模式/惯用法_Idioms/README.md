@@ -4,7 +4,6 @@ Rust Design Patterns中的Idioms按相关知识点归档，本页作为统一索
 
 | Idiom | 实际归属 | 原文 |
 | --- | --- | --- |
-| Use borrowed types for arguments | [使用借用类型作为函数参数](../../所有权/使用借用类型作为函数参数/) | [原文](https://rust-unofficial.github.io/patterns/idioms/coercion-arguments.html) |
 | `mem::{take(_), replace(_)}` | [使用mem::take和mem::replace转移可变引用中的所有权](../../所有权/使用mem-take和replace转移可变引用中的所有权/) | [原文](https://rust-unofficial.github.io/patterns/idioms/mem-replace.html) |
 | Temporary mutability | [使用临时可变性明确修改范围](../../RUST基础/使用临时可变性明确修改范围/) | [原文](https://rust-unofficial.github.io/patterns/idioms/temporary-mutability.html) |
 | Constructor | [Constructor 构造函数惯例](../../自定义数据类型/Constructor构造函数惯例/) | [原文](https://rust-unofficial.github.io/patterns/idioms/ctor.html) |
