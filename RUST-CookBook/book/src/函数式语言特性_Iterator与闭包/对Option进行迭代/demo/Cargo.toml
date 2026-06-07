@@ -1,0 +1,6 @@
+[package]
+name = "functional_option_iteration"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
