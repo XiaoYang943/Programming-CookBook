@@ -155,6 +155,10 @@ name = "ownership_slices"
 version = "0.1.0"
 
 [[package]]
+name = "smart_arc"
+version = "0.1.0"
+
+[[package]]
 name = "smart_avoid_deref_polymorphism"
 version = "0.1.0"
 
