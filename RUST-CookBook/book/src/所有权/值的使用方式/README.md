@@ -104,22 +104,3 @@ Rust 会阻止返回指向局部变量的引用
 
 {{#playground demo/src/bin/raw_pointer_读取原始指针.rs editable}}
 
-## 智能指针与所有权
-
-### 使用 `Box<T>` 获得堆上唯一所有权
-
-`Box<T>` 在堆上存储值，并保持单一所有者。离开作用域时，Box 和其内容会一起释放。
-
-{{#playground demo/src/bin/box_堆上唯一所有权.rs editable}}
-
-### 使用 `Rc<T>` 共享单线程所有权
-
-`Rc<T>` 通过引用计数允许同一个值拥有多个所有者，仅适用于单线程。
-
-{{#playground demo/src/bin/rc_共享单线程所有权.rs editable}}
-
-### 使用 `Arc<T>` 共享多线程所有权
-
-`Arc<T>` 使用原子引用计数，可以在线程间共享所有权。共享可变状态通常还需要配合同步类型。
-
-{{#playground demo/src/bin/arc_共享多线程所有权.rs editable}}
