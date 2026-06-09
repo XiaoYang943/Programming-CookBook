@@ -171,10 +171,6 @@ name = "smart_collections"
 version = "0.1.0"
 
 [[package]]
-name = "smart_deref"
-version = "0.1.0"
-
-[[package]]
 name = "smart_destructor_cleanup"
 version = "0.1.0"
 
