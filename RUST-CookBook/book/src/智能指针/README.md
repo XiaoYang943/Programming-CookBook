@@ -6,6 +6,8 @@
 
 > 《Rust Reference》：[析构器](https://doc.rust-lang.org/reference/destructors.html)
 
+> Effective Rust **Item 11**：[Implement the Drop trait for RAII patterns](https://effective-rust.com/raii.html)。
+
 ## 智能指针是什么
 
 智能指针是拥有数据并提供额外行为的数据结构，通常实现 `Deref` 和 `Drop`
