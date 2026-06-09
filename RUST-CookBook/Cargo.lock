@@ -179,10 +179,6 @@ name = "smart_drop"
 version = "0.1.0"
 
 [[package]]
-name = "smart_raii"
-version = "0.1.0"
-
-[[package]]
 name = "smart_rc"
 version = "0.1.0"
 
