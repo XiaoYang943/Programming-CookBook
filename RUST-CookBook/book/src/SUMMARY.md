@@ -65,7 +65,6 @@
   - [通过实现Drop-Trait清理资源](智能指针/通过实现Drop-Trait清理资源/README.md)
   - [引用循环可能导致内存泄漏](智能指针/引用循环可能导致内存泄漏/README.md)
   - [将集合视为智能指针](智能指针/将集合视为智能指针/README.md)
-  - [在Destructor中完成资源清理](智能指针/在Destructor中完成资源清理/README.md)
   - [不要使用Deref模拟继承](智能指针/不要使用Deref模拟继承/README.md)
 
 - [错误处理](错误处理/README.md)

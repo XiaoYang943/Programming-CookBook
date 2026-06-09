@@ -1,6 +1,7 @@
 ﻿# 通过实现Drop-Trait清理资源
 
 > 《Rust 程序设计语言》：[通过实现Drop-Trait清理资源](https://doc.rust-lang.org/book/ch15-03-drop.html)。
+> 《Rust 设计模式》：[Finalisation in Destructors](https://rust-unofficial.github.io/patterns/idioms/dtor-finally.html)。
 
 - Rust 的 `Drop` 与 C++ 析构函数作用相近：值离开作用域时，自动运行资源清理逻辑。这种把资源生命周期绑定到对象生命周期的方式称为 RAII。
 

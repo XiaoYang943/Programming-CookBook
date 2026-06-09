@@ -15,7 +15,7 @@ Rust Design Patterns中的Idioms按相关知识点归档，本页作为统一索
 | Pass Variables to Closure | [向Closure传递变量](../../函数式语言特性_Iterator与闭包/向Closure传递变量/) | [原文](https://rust-unofficial.github.io/patterns/idioms/pass-var-to-closure.html) |
 | Privacy For Extensibility | [为可扩展性保留私有实现](../../Package_Crate_Module与Cargo/Crate设计与发布/为可扩展性保留私有实现/) | [原文](https://rust-unofficial.github.io/patterns/idioms/priv-extend.html) |
 | Collections Are Smart Pointers | [将集合视为智能指针](../../智能指针/将集合视为智能指针/) | [原文](https://rust-unofficial.github.io/patterns/idioms/deref.html) |
-| Finalisation in Destructors | [在Destructor中完成资源清理](../../智能指针/在Destructor中完成资源清理/) | [原文](https://rust-unofficial.github.io/patterns/idioms/dtor-finally.html) |
+| Finalisation in Destructors | [通过实现Drop-Trait清理资源](../../智能指针/通过实现Drop-Trait清理资源/) | [原文](https://rust-unofficial.github.io/patterns/idioms/dtor-finally.html) |
 | FFI Idiomatic Errors | [FFI中的惯用错误处理](../../FFI与跨语言交互/FFI中的惯用错误处理/) | [原文](https://rust-unofficial.github.io/patterns/idioms/ffi/errors.html) |
 | FFI Accepting Strings | [FFI接收String](../../FFI与跨语言交互/FFI接收String/) | [原文](https://rust-unofficial.github.io/patterns/idioms/ffi/accepting-strings.html) |
 | FFI Passing Strings | [FFI传递String](../../FFI与跨语言交互/FFI传递String/) | [原文](https://rust-unofficial.github.io/patterns/idioms/ffi/passing-strings.html) |
