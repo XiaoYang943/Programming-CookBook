@@ -123,6 +123,10 @@ name = "functional_option_iteration"
 version = "0.1.0"
 
 [[package]]
+name = "generic_enum_production_examples"
+version = "0.1.0"
+
+[[package]]
 name = "generics_data_types"
 version = "0.1.0"
 
