@@ -170,3 +170,18 @@ book/src/
 - Effective Rust：https://effective-rust.com/types.html
 - Rust Design Patterns：https://rust-unofficial.github.io/patterns/intro.html
 - Rust std library API doc: https://doc.rust-lang.org/stable/std/index.html
+
+## markdown语法规约
+### 用>表示"下定义"
+```markdown
+## Rust语言
+### Rust语言的特点是什么
+> 在没有垃圾回收 GC 的情况下，尽量保证内存安全和线程安全
+```
+### 普通正文之前不加任何符号
+```markdown
+## 二级标题
+正文...
+```
+## rust-demo代码规约
+1. 注释不需要中文句号

@@ -211,6 +211,10 @@ name = "struct_methods"
 version = "0.1.0"
 
 [[package]]
+name = "trait_design_patterns"
+version = "0.1.0"
+
+[[package]]
 name = "traits_advanced"
 version = "0.1.0"
 

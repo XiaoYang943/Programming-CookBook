@@ -45,6 +45,7 @@
   - [泛型数据类型](泛型_trait与生命周期/泛型数据类型/README.md)
   - [泛型 enum 实践](泛型_trait与生命周期/泛型enum实践/README.md)
   - [使用 trait 定义共同行为](泛型_trait与生命周期/使用trait定义共同行为/README.md)
+  - [trait 设计模式](泛型_trait与生命周期/trait设计模式/README.md)
   - [使用生命周期验证引用](泛型_trait与生命周期/使用生命周期验证引用/README.md)
   - [使用类型系统表达共同行为](泛型_trait与生命周期/使用类型系统表达共同行为/README.md)
   - [熟悉标准Trait](泛型_trait与生命周期/熟悉标准Trait/README.md)
