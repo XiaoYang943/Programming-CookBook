@@ -127,40 +127,127 @@ trait Iterator {
 
 ## 标准Trait-Fn闭包参数
 
-> `Fn` 是标准库里的 trait。`impl Fn(...) -> ...` 是一种 trait bound 写法，用来约束“这个参数必须是可以被调用的东西”。
+这一节不要先急着看 `Fn`。先看 `map_coords` 想解决什么问题。
 
-Rust 里的闭包、函数名、函数指针，都可以被当成“可调用对象”。为了描述这些可调用对象，标准库提供了三个核心 trait：
+真实工程参考：
 
-- `Fn`：可以被反复调用，并且不会修改捕获的外部变量。
-- `FnMut`：可以被反复调用，但可能会修改捕获的外部变量。
-- `FnOnce`：至少可以被调用一次调用时可能会消耗自己捕获的值，。
+- geo `MapCoords` trait：<https://github.com/georust/geo/blob/main/geo/src/algorithm/map_coords.rs>
 
-所以，当你看到：
+### map_coords 要表达什么语义
 
-```rust
-fn map_pair(self, f: impl Fn(i32) -> i32) -> Self
-```
+`map_coords` 的核心语义是：
 
-可以把它读成：
+> 给一个结构里的每个坐标点应用同一种转换规则，并返回转换后的新结构。
 
-> `map_pair` 接收一个参数 `f`，这个参数必须能像函数一样调用：输入一个 `i32`，返回一个 `i32`。
-
-这里的 `impl Fn(i32) -> i32` 可以拆开理解：
-
-- `impl Trait`：参数位置的简写，表示“接收某个实现了这个 trait 的具体类型”。
-- `Fn(i32) -> i32`：标准库闭包 trait，表示“能被调用，参数是 `i32`，返回值是 `i32`”。
-
-因此，`Fn trait 闭包参数` 不是一种单独的新语法，也不是最佳实践口号，而是这几个概念组合起来：
+比如一个点：
 
 ```rust
-参数: impl Fn(入参类型) -> 返回类型
+Point { x: 1.0, y: 2.0 }
 ```
 
-它的作用是：**把一段行为作为参数传给函数或 trait 方法**。
+可以被转换成：
 
-### 闭包
+- 平移后的点：`x + dx`，`y + dy`
+- 缩放后的点：`x * factor`，`y * factor`
+- 取整后的点：`x.round()`，`y.round()`
+- 限制范围后的点：`x.clamp(min, max)`，`y.clamp(min, max)`
 
-> 闭包是一种可以保存到变量里、可以作为参数传递、也可以直接调用的匿名函数。
+对于一个 `Line`：
+
+```rust
+Line {
+    start: Point { ... },
+    end: Point { ... },
+}
+```
+
+语义就是：
+
+> 对 `start` 和 `end` 都应用同一个点转换规则。
+
+所以这里真正的问题不是“怎么写闭包”，而是：
+
+> 如何让 `Line` 负责遍历自己的坐标结构，同时让调用方决定每个坐标怎么变？
+
+### 常规思路：不用闭包时给每种转换写一个方法
+
+如果先不用闭包，最直接的写法是给 `Line` 写很多专门方法：
+
+```rust
+line.translate(10.0, 20.0);
+line.scale(2.0);
+line.clamp(-180.0, 180.0);
+```
+
+这个思路很好理解：要平移就写 `translate`，要缩放就写 `scale`，要限制范围就写 `clamp`。
+
+{{#playground demo/src/bin/fn_trait_不使用闭包.rs editable}}
+
+### 常规思路的问题
+
+上面的写法能工作，但它会带来几个问题。
+
+第一，每新增一种转换规则，`Line` 的 API 就要新增一个方法。
+
+```rust
+fn translate(self, dx: f64, dy: f64) -> Self
+fn scale(self, factor: f64) -> Self
+fn clamp(self, min: f64, max: f64) -> Self
+fn round(self) -> Self
+fn flip_x(self) -> Self
+```
+
+第二，每个方法内部都会重复同一件事：
+
+```rust
+Self {
+    start: 某种转换(self.start),
+    end: 某种转换(self.end),
+}
+```
+
+第三，`Line` 同时承担了两个职责：
+
+- 它要知道自己的结构，也就是内部有 `start` 和 `end`。
+- 它还要知道所有可能的坐标转换算法。
+
+这会让接口越来越胖，也让重复代码越来越多。
+
+### 解决方案：把变化规则作为参数传进去
+
+既然固定的是“遍历结构”，变化的是“每个点怎么变”，那就可以把变化规则提出来，作为参数传给 `Line`：
+
+```rust
+trait MapCoords {
+    fn map_coords(self, f: impl Fn(Point) -> Point) -> Self;
+}
+```
+
+这段签名可以读成：
+
+> `map_coords` 接收一段坐标转换规则，这段规则能把一个 `Point` 变成另一个 `Point`。
+
+这样一来：
+
+- `Line` 只负责遍历 `start` 和 `end`。
+- 调用方只负责提供“点怎么变”的规则。
+
+比如：
+
+```rust
+line.map_coords(|point| Point {
+    x: point.x + 10.0,
+    y: point.y + 20.0,
+});
+```
+
+这里的 `|point| ...` 就是一段可以传进去的规则。
+
+{{#playground demo/src/bin/fn_trait_闭包参数.rs editable}}
+
+### 闭包是什么
+
+闭包是一种可以保存到变量里、可以作为参数传递、也可以直接调用的匿名函数。
 
 最简单的闭包长这样：
 
@@ -176,74 +263,61 @@ let result = add_one(41);
 - `value + 1` 是闭包体。
 - `add_one(41)` 表示像调用函数一样调用这个闭包。
 
-#### 闭包和普通函数的区别
-##### 闭包可以捕获它所在作用域里的变量。
+闭包和普通函数最重要的区别是：**闭包可以捕获它所在作用域里的变量**。
 
 ```rust
-let offset = 10;
+let dx = 10.0;
+let dy = 20.0;
 
-let add_offset = |value| value + offset;
+let translate = |point: Point| Point {
+    x: point.x + dx,
+    y: point.y + dy,
+};
 ```
 
-这里的 `add_offset` 不只接收 `value`，还使用了外部变量 `offset`。这就是“捕获环境”。
+这里的 `translate` 表面上是一个 `Point -> Point` 的规则，但它内部带着 `dx` 和 `dy`。
 
-所以闭包很适合表达：
+这就是闭包捕获环境的价值：
 
-> 这里有一段临时的、可传递的处理规则。
+> 把“行为”和“这段行为需要用到的上下文数据”打包在一起传递。
 
-在下面的坐标转换例子里，闭包的作用不是遍历数据，而是定义“每个坐标点怎么变”：
-
-```rust
-|point| Point {
-    x: point.x + 10.0,
-    y: point.y + 20.0,
-}
-```
-
-这段闭包可以读成： 给我一个 `Point`，我返回一个平移后的新 `Point`。
+如果不用闭包捕获环境，`dx`、`dy`、`factor`、`min`、`max` 这些上下文数据就很容易被塞进各种专门方法里，导致 API 不断膨胀。
 
 ### 为什么参数类型要写成 Fn
 
-Rust 里的闭包不是一个统一的具体类型。每一个闭包都有编译器生成的匿名类型，普通代码写不出这个具体类型名。
+`Fn` 是标准库里的 trait，不是关键字。`impl Fn(...) -> ...` 是一种 trait bound 写法，用来约束“这个参数必须是可以被调用的东西”。
 
-比如这两个闭包，即使长得很像，它们也是不同的具体类型：
+Rust 里的闭包、函数名、函数指针，都可以被当成“可调用对象”。为了描述这些可调用对象，标准库提供了三个核心 trait：
+
+- `Fn`：可以被反复调用，并且不会修改捕获的外部变量。
+- `FnMut`：可以被反复调用，但可能会修改捕获的外部变量。
+- `FnOnce`：至少可以被调用一次；调用时可能会消耗自己捕获的值。
+
+所以：
+
+```rust
+fn map_coords(self, f: impl Fn(Point) -> Point) -> Self
+```
+
+可以拆开读：
+
+- `impl Trait`：参数位置的简写，表示“接收某个实现了这个 trait 的具体类型”。
+- `Fn(Point) -> Point`：标准库闭包 trait，表示“能被调用，参数是 `Point`，返回值是 `Point`”。
+
+也就是说：
+
+> `f` 的具体类型叫什么不重要，只要它能被调用，并且满足“输入 `Point`，返回 `Point`”。
+
+Rust 需要这种写法，是因为每个闭包都有编译器生成的匿名类型，普通代码写不出这个具体类型名。比如下面两个闭包，即使长得很像，也是不同的具体类型：
 
 ```rust
 let add_one = |value| value + 1;
 let add_two = |value| value + 2;
 ```
 
-函数参数不能写成“某个说不出名字的闭包类型”，所以 Rust 用 trait 来描述闭包具备的能力：
+函数参数不能写成“某个说不出名字的闭包类型”，所以用 `Fn` trait 来描述它的能力。
 
-```rust
-fn apply(f: impl Fn(i32) -> i32, value: i32) -> i32 {
-    f(value)
-}
-```
-
-这段代码的意思是：
-
-> `f` 的具体类型叫什么不重要，只要它能被调用，并且满足“输入 `i32`，返回 `i32`”。
-
-回到本节的例子：
-
-```rust
-fn map_coords(self, f: impl Fn(Point) -> Point) -> Self
-```
-
-可以读成：
-
-> `map_coords` 接收一段坐标转换规则，这段规则必须能接收一个 `Point`，并返回一个新的 `Point`。
-
-所以这个例子里的分工是：
-
-- `Point` / `Line` 负责“数据结构长什么样、有哪些坐标”。
-- 闭包负责“每个坐标怎么变”。
-- `Fn(Point) -> Point` 负责约束“传进来的规则必须能被调用，并且输入输出都是 `Point`”。
-
-真实工程参考：
-
-- geo `MapCoords` trait：<https://github.com/georust/geo/blob/main/geo/src/algorithm/map_coords.rs>
+### geo MapCoords 的真实设计
 
 `geo` 的 `MapCoords` 大意是：
 
@@ -258,24 +332,21 @@ fn map_coords(
 
 > 几何类型自己负责遍历内部坐标，调用方传入一个闭包 `func`，决定每个坐标如何转换。
 
-以下是简化版的 `MapCoords`：
+真实工程里的几何类型可能是 `Point`、`LineString`、`Polygon`、`MultiPolygon`。调用方不应该手动拆每一层结构；几何类型自己知道怎么遍历内部坐标，调用方只提供坐标转换规则。
 
-- `Point` 本身就是一个坐标点，可以直接应用转换规则。
-- `Line` 内部有 `start` 和 `end` 两个点，它自己负责遍历这两个点。
-- 调用方不需要手动拆开 `Line`，只需要传入闭包说明“每个 `Point` 怎么变”。
+### 小结：闭包在这里解决了什么问题
 
-比如：
+在这个例子里，闭包不是为了炫技。它解决的是 API 设计问题：
 
-```rust
-line.map_coords(|point| Point {
-    x: point.x + 10.0,
-    y: point.y + 20.0,
-});
-```
+- `Line` 只负责结构遍历。
+- 转换规则由调用方提供。
+- 一个 `map_coords` 可以支持无数种坐标转换。
+- 闭包可以捕获上下文，比如 `dx`、`dy`、`factor`、`min`、`max`。
+- API 不会随着转换规则增加而不断膨胀。
 
-这就是 `Fn` / `FnMut` / `FnOnce` 这类 trait 在接口设计里的价值：**类型负责结构，闭包负责变化规则**。
+一句话：
 
-{{#playground demo/src/bin/fn_trait_闭包参数.rs editable}}
+> 闭包把“带上下文的处理规则”包装成一个简单的 `Point -> Point` 形状传进去。
 
 ## blanket impl 条件实现
 
