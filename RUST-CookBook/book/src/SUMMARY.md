@@ -1,9 +1,5 @@
 # Rust 程序设计语言
 
-[Rust 程序设计语言](Rust程序设计语言/README.md)
-[前言](前言/README.md)
-[简介](简介/README.md)
-
 - [入门](入门/README.md)
   - [生态](入门/生态/README.md)
 
@@ -185,12 +181,6 @@
   - [不要在Crate中设置deny(warnings)](扩展知识体系/不要在Crate中设置deny-warnings/README.md)
   - [参考资料与索引](扩展知识体系/参考资料与索引/README.md)
 
-- [编写自动化测试](编写自动化测试/README.md)
-  - [如何编写测试](编写自动化测试/如何编写测试/README.md)
-  - [控制测试的运行方式](编写自动化测试/控制测试的运行方式/README.md)
-  - [测试的组织结构](编写自动化测试/测试的组织结构/README.md)
-  - [不要只编写单元测试](编写自动化测试/不要只编写单元测试/README.md)
-  - [建立持续集成CI系统](编写自动化测试/建立持续集成CI系统/README.md)
 
 - [Package、Crate、Module 与 Cargo](Package_Crate_Module与Cargo/README.md)
   - [Rust 代码组织](Package_Crate_Module与Cargo/Rust代码组织/README.md)
