@@ -16,7 +16,7 @@
 | 6 | [Embrace the newtype pattern](https://effective-rust.com/newtype.html) | [使用Newtype模式](../../高级特性/使用Newtype模式/README.md)                                                            |
 | 7 | [Use builders for complex types](https://effective-rust.com/builders.html) | [为复杂类型使用 Builder 模式](../../自定义数据类型/为复杂类型使用Builder模式/README.md)                                             |
 | 8 | [Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html) | [值的使用方式](../../所有权/值的使用方式/README.md)                                                                    |
-| 9 | [Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html) | [优先考虑Iterator转换而非显式循环](../../函数式语言特性_Iterator与闭包/优先考虑Iterator转换而非显式循环/README.md)                           |
+| 9 | [Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html) | [优先考虑Iterator转换而非显式循环](../../迭代器与闭包/优先考虑Iterator转换而非显式循环/README.md)                           |
 | 10 | [Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html) | [熟悉标准Trait](../../泛型_trait与生命周期/熟悉标准Trait/README.md)                                                       |
 | 11 | [Implement the Drop trait for RAII patterns](https://effective-rust.com/raii.html) | [通过实现Drop-Trait清理资源](../../智能指针/通过实现Drop-Trait清理资源/README.md)                                          |
 | 12 | [Understand the trade-offs between generics and trait objects](https://effective-rust.com/generics.html) | [理解泛型与Trait Object的权衡](../../泛型_trait与生命周期/理解泛型与Trait-Object的权衡/README.md)                                 |
