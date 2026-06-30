@@ -3,22 +3,6 @@
 version = 4
 
 [[package]]
-name = "collections_format_string"
-version = "0.1.0"
-
-[[package]]
-name = "collections_hashmap"
-version = "0.1.0"
-
-[[package]]
-name = "collections_string"
-version = "0.1.0"
-
-[[package]]
-name = "collections_vector"
-version = "0.1.0"
-
-[[package]]
 name = "common_comments"
 version = "0.1.0"
 
