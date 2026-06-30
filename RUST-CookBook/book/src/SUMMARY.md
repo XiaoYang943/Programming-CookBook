@@ -33,12 +33,6 @@
   - [`match` 控制流结构](自定义数据类型/match控制流结构/README.md)
   - [使用 `if let` 和 `let...else` 简化控制流](自定义数据类型/使用if-let和let-else简化控制流/README.md)
 
-- [常用集合](常用集合/README.md)
-  - [使用 Vector 存储值列表](常用集合/使用Vector存储值列表/README.md)
-  - [使用 String 存储 UTF-8 编码文本](常用集合/使用String存储UTF-8编码文本/README.md)
-  - [使用 HashMap 存储键与关联值](常用集合/使用HashMap存储键与关联值/README.md)
-  - [使用format!拼接String](常用集合/使用format拼接String/README.md)
-
 - [泛型、trait 与生命周期](泛型_trait与生命周期/README.md)
   - [泛型数据类型](泛型_trait与生命周期/泛型数据类型/README.md)
   - [泛型 enum 实践](泛型_trait与生命周期/泛型enum实践/README.md)

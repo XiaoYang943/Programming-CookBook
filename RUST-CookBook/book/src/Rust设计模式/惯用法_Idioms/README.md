@@ -7,7 +7,6 @@ Rust Design Patterns中的Idioms按相关知识点归档，本页作为统一索
 | `mem::{take(_), replace(_)}` | [使用mem::take和mem::replace转移可变引用中的所有权](../../所有权/使用mem-take和replace转移可变引用中的所有权/) | [原文](https://rust-unofficial.github.io/patterns/idioms/mem-replace.html) |
 | Temporary mutability | [使用临时可变性明确修改范围](../../RUST基础/使用临时可变性明确修改范围/) | [原文](https://rust-unofficial.github.io/patterns/idioms/temporary-mutability.html) |
 | Constructor | [Constructor 构造函数惯例](../../自定义数据类型/Constructor构造函数惯例/) | [原文](https://rust-unofficial.github.io/patterns/idioms/ctor.html) |
-| Concatenating Strings with `format!` | [使用format!拼接String](../../常用集合/使用format拼接String/) | [原文](https://rust-unofficial.github.io/patterns/idioms/concat-format.html) |
 | Return consumed arg on error | [发生错误时返回已消费的参数](../../错误处理/发生错误时返回已消费的参数/) | [原文](https://rust-unofficial.github.io/patterns/idioms/return-consumed-arg-on-error.html) |
 | The Default Trait | [使用Default Trait提供默认值](../../泛型_trait与生命周期/使用Default-Trait提供默认值/) | [原文](https://rust-unofficial.github.io/patterns/idioms/default.html) |
 | On-Stack Dynamic Dispatch | [栈上动态分派 On-Stack Dynamic Dispatch](../../泛型_trait与生命周期/栈上动态分派_On-Stack-Dynamic-Dispatch/) | [原文](https://rust-unofficial.github.io/patterns/idioms/on-stack-dyn-dispatch.html) |
