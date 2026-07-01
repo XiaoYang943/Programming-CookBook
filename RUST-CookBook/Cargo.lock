@@ -175,10 +175,6 @@ name = "smart_reference_cycles"
 version = "0.1.0"
 
 [[package]]
-name = "struct_builder_pattern"
-version = "0.1.0"
-
-[[package]]
 name = "struct_constructor_idiom"
 version = "0.1.0"
 

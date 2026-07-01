@@ -26,7 +26,6 @@
   - [定义与实例化 struct](自定义数据类型/定义与实例化struct/README.md)
   - [使用 struct 的示例程序](自定义数据类型/使用struct的示例程序/README.md)
   - [方法](自定义数据类型/方法/README.md)
-  - [为复杂类型使用 Builder 模式](自定义数据类型/为复杂类型使用Builder模式/README.md)
   - [Constructor 构造函数惯例](自定义数据类型/Constructor构造函数惯例/README.md)
   - [使用Newtype模式](自定义数据类型/使用Newtype模式/README.md)
 
@@ -163,6 +162,7 @@
     - [Visitor访问者模式](Rust设计模式/行为型模式_Behavioural/Visitor访问者模式/README.md)
   - [创建型模式 Creational](Rust设计模式/创建型模式_Creational/README.md)
     - [Builder构建器模式](Rust设计模式/创建型模式_Creational/Builder构建器模式/README.md)
+      - [复杂类型 Builder 实践](Rust设计模式/创建型模式_Creational/Builder构建器模式/复杂类型Builder实践/README.md)
     - [Fold模式](Rust设计模式/创建型模式_Creational/Fold模式/README.md)
   - [结构型模式 Structural](Rust设计模式/结构型模式_Structural/README.md)
     - [Compose Structs组合结构体](Rust设计模式/结构型模式_Structural/Compose-Structs组合结构体/README.md)
