@@ -94,12 +94,6 @@
     - [为可扩展性保留私有实现](Package_Crate_Module与Cargo/Crate设计与发布/为可扩展性保留私有实现/README.md)
     - [考虑让库兼容no_std](Package_Crate_Module与Cargo/Crate设计与发布/考虑让库兼容no_std/README.md)
 
-- [常用集合](常用集合/README.md)
-  - [使用 Vector 存储值列表](常用集合/使用Vector存储值列表/README.md)
-  - [使用 String 存储 UTF-8 编码文本](常用集合/使用String存储UTF-8编码文本/README.md)
-  - [使用 format! 拼接 String](常用集合/使用format拼接String/README.md)
-  - [使用 HashMap 存储键与关联值](常用集合/使用HashMap存储键与关联值/README.md)
-
 - [智能指针](智能指针/README.md)
   - [`Box<T>` 指向堆上的数据](智能指针/使用Box指向堆上的数据/README.md)
   - [`Rc<T>`：引用计数](智能指针/Rc引用计数/README.md)
