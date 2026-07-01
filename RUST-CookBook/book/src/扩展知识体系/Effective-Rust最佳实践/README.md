@@ -9,7 +9,7 @@
 | Item | 建议 | 本项目归属                                                                                                      |
 | ---: | --- |------------------------------------------------------------------------------------------------------------|
 | 1 | [Use the type system to express your data structures](https://effective-rust.com/use-types.html) | [使用类型系统表达数据结构](../../RUST基础/使用类型系统表达数据结构/README.md)                                                        |
-| 2 | [Use the type system to express common behavior](https://effective-rust.com/use-types-2.html) | [使用类型系统表达共同行为](../../泛型_trait与生命周期/使用类型系统表达共同行为/README.md)                                                 |
+| 2 | [Use the type system to express common behavior](https://effective-rust.com/use-types-2.html) | [使用类型系统表达共同行为](../../Trait与共同行为/使用类型系统表达共同行为/README.md)                                                 |
 | 3 | [Prefer Option and Result transforms over explicit match expressions](https://effective-rust.com/transform.html) | [优先选择Option和Result转换](../../错误处理/优先选择Option和Result转换/README.md)                                            |
 | 4 | [Prefer idiomatic Error types](https://effective-rust.com/errors.html) | [优先使用符合Rust惯例的Error类型](../../错误处理/优先使用符合Rust惯例的Error类型/README.md)                                          |
 | 5 | [Understand type conversions](https://effective-rust.com/casts.html) | [理解类型转换](../../RUST基础/理解类型转换/README.md)                                                                    |
@@ -17,16 +17,16 @@
 | 7 | [Use builders for complex types](https://effective-rust.com/builders.html) | [为复杂类型使用 Builder 模式](../../Rust设计模式/创建型模式_Creational/Builder构建器模式/复杂类型Builder实践/README.md)                                             |
 | 8 | [Familiarize yourself with reference and pointer types](https://effective-rust.com/references.html) | [值的使用方式](../../所有权/值的使用方式/README.md)                                                                    |
 | 9 | [Consider iterator transforms instead of explicit loops](https://effective-rust.com/iterators.html) | [优先考虑Iterator转换而非显式循环](../../迭代器与闭包/优先考虑Iterator转换而非显式循环/README.md)                           |
-| 10 | [Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html) | [熟悉标准Trait](../../泛型_trait与生命周期/熟悉标准Trait/README.md)                                                       |
+| 10 | [Familiarize yourself with standard traits](https://effective-rust.com/std-traits.html) | [熟悉标准Trait](../../Trait与共同行为/熟悉标准Trait/README.md)                                                       |
 | 11 | [Implement the Drop trait for RAII patterns](https://effective-rust.com/raii.html) | [通过实现Drop-Trait清理资源](../../智能指针/通过实现Drop-Trait清理资源/README.md)                                          |
-| 12 | [Understand the trade-offs between generics and trait objects](https://effective-rust.com/generics.html) | [理解泛型与Trait Object的权衡](../../泛型_trait与生命周期/理解泛型与Trait-Object的权衡/README.md)                                 |
-| 13 | [Use default implementations to minimize required trait methods](https://effective-rust.com/default-impl.html) | [使用默认实现减少Trait必需方法](../../泛型_trait与生命周期/使用默认实现减少Trait必需方法/README.md)                                       |
-| 14 | [Understand lifetimes](https://effective-rust.com/lifetimes.html) | [理解生命周期](../../泛型_trait与生命周期/理解生命周期/README.md)                                                             |
+| 12 | [Understand the trade-offs between generics and trait objects](https://effective-rust.com/generics.html) | [理解泛型与Trait Object的权衡](../../Trait与共同行为/理解泛型与Trait-Object的权衡/README.md)                                 |
+| 13 | [Use default implementations to minimize required trait methods](https://effective-rust.com/default-impl.html) | [使用默认实现减少Trait必需方法](../../Trait与共同行为/使用默认实现减少Trait必需方法/README.md)                                       |
+| 14 | [Understand lifetimes](https://effective-rust.com/lifetimes.html) | [理解生命周期](../../生命周期/理解生命周期/README.md)                                                             |
 | 15 | [Understand the borrow checker](https://effective-rust.com/borrows.html) | [理解Borrow Checker](../../所有权/理解Borrow-Checker/README.md)                                                   |
 | 16 | [Avoid writing unsafe code](https://effective-rust.com/unsafe.html) | [避免编写Unsafe代码](../../高级特性/避免编写Unsafe代码/README.md)                                                          |
 | 17 | [Be wary of shared-state parallelism](https://effective-rust.com/deadlock.html) | [警惕共享状态并行](../../并发编程/警惕共享状态并行/README.md)                                                                  |
 | 18 | [Don't panic](https://effective-rust.com/panic.html) | [不要轻易panic](../../错误处理/不要轻易panic/README.md)                                                                |
-| 19 | [Avoid reflection](https://effective-rust.com/reflection.html) | [避免使用反射](../../泛型_trait与生命周期/避免使用反射/README.md)                                                             |
+| 19 | [Avoid reflection](https://effective-rust.com/reflection.html) | [避免使用反射](../../Trait与共同行为/避免使用反射/README.md)                                                             |
 | 20 | [Avoid the temptation to over-optimize](https://effective-rust.com/optimize.html) | [避免过早和过度优化](../避免过早和过度优化/README.md)                                                                        |
 | 21 | [Understand what semantic versioning promises](https://effective-rust.com/semver.html) | [理解Semantic Versioning的承诺](../../Package_Crate_Module与Cargo/Crate设计与发布/理解Semantic-Versioning的承诺/README.md) |
 | 22 | [Minimize visibility](https://effective-rust.com/visibility.html) | [最小化可见性](../../Package_Crate_Module与Cargo/Crate设计与发布/最小化可见性/README.md)                                     |
