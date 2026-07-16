@@ -1,0 +1,64 @@
+:root {
+  --doc-aside-width: clamp(300px, 20vw, 420px);
+  --vp-sidebar-width: clamp(280px, 18vw, 320px);
+  --vp-layout-max-width: min(92vw, 1760px);
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #3b82f6;
+  --vp-c-brand-3: #60a5fa;
+}
+
+.VPDoc .aside {
+  flex: 0 0 var(--doc-aside-width);
+  max-width: var(--doc-aside-width);
+  padding-left: clamp(24px, 2.2vw, 40px);
+}
+
+.VPDoc .aside-container,
+.VPDoc .aside-curtain {
+  width: calc(var(--doc-aside-width) - clamp(24px, 2.2vw, 40px));
+}
+
+.VPDoc .aside-container {
+  overflow-x: visible;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: clamp(780px, 52vw, 960px);
+}
+
+.VPDocAsideOutline .content {
+  padding-left: 18px;
+}
+
+.VPDocAsideOutline .outline-link {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  font-size: clamp(12.5px, 0.68vw, 13.5px);
+  line-height: 1.8;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.VPDocAsideOutline .outline-link .outline-link-text {
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.VPSidebarItem .text {
+  white-space: normal;
+  line-height: 1.55;
+}
+
+.vp-doc {
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.vp-doc p {
+  margin: 18px 0;
+}
+
+.vp-doc h2 {
+  margin-top: 48px;
+}
